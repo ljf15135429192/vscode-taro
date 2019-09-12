@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 let array = ['View',
   'Scrollview',
   'Swiper',
@@ -65,7 +66,7 @@ class  $1  extends Component {
   render() {
     return (
       <View>
-        $2
+       
       </View>
     );
   }

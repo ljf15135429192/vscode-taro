@@ -2,12 +2,13 @@
 	"name": "taro",
 	"displayName": "taro",
 	"description": "taro代码片段",
-	"version": "0.0.1",
+	"version": "0.0.2",
+	"icon": "icon.png",
 	"publisher": "jinfenglou",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/anyexinglue/bst-snippets/"
-	  },
+		"url": "https://github.com/ljf15135429192/vscode-taro.git"
+	},
 	"engines": {
 		"vscode": "^1.38.0"
 	},
@@ -37,6 +38,12 @@
 				"title": "taro"
 			}
 		],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/taro.json"
+			}
+		],
 		"configuration": {
 			"type": "object",
 			"title": "taro-config",
@@ -50,15 +57,13 @@
 					"type": "number",
 					"default": 2,
 					"description": "倍数"
+				},
+				"taro.config": {
+					"type": "boolean",
+					"default": false,
+					"description": "是否开启倍数"
 				}
-			},
-			"snippets": [
-				{
-					"language": "javascript",
-					"path": "./snippets/taro.json"
-				}
-				
-			]
+			}
 		}
 	},
 
