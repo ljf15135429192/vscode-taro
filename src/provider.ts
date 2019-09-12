@@ -32,10 +32,17 @@ export class TaroProvider implements vscode.CompletionItemProvider {
                 if (!res) {
                     return resolve([]);
                 }
+           
                 const item = new vscode.CompletionItem(`${res.pxValue}px -> ${res.pxValue*Number(this.config.num)}px`, vscode.CompletionItemKind.Snippet);
                 item.insertText = res.rem;
-                console.log(item);
-                return resolve([item]);
+                console.log(item);    
+                let num = vscode.workspace.getConfiguration('taro');
+                if(num.config){
+                     return resolve([item]);
+                }else{
+                    return resolve([]);
+                }
+               
             });
         }
 }

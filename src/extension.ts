@@ -10,7 +10,8 @@ export function activate(context: vscode.ExtensionContext) {
 	});
 	
 	let num = vscode.workspace.getConfiguration('taro');
-	let provider = new TaroProvider(num);
+
+		let provider = new TaroProvider(num);
    //动态筛选
 	const LANS = ['html', 'vue', 'css', 'less', 'scss', 'sass', 'stylus'];
     for (let lan of LANS) {
@@ -50,9 +51,12 @@ export function activate(context: vscode.ExtensionContext) {
             builder.replace(selection,convertAll(txt));
         });
     });
+	context.subscriptions.push(disposableTaro);
+	
+	
 	context.subscriptions.push(disposable);
 
-	context.subscriptions.push(disposableTaro);
+	
 	
 }
 

@@ -47,8 +47,8 @@ function activate(context) {
             builder.replace(selection, convertAll(txt));
         });
     });
-    context.subscriptions.push(disposable);
     context.subscriptions.push(disposableTaro);
+    context.subscriptions.push(disposable);
 }
 exports.activate = activate;
 function deactivate() { }

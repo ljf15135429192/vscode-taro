@@ -86,6 +86,9 @@ html vue css less scss sass stylus tpl（php smarty3）
 
 # Configuration
 
-暂无
+
+num 转化倍数 默认2倍
+title 官方程序 默认 gogogo
+config 转化开启开关 默认 false
 
 **NOTE:** Muse be restart vscode after modification
