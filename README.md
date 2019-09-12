@@ -1,26 +1,19 @@
-# cssrem
-
-A `px` to `tow px` and taro snippet plugin in VSCode
-
+# 基本
 整合基础的taro标签片段
 
 1px转化为2px
-(鸡肋,由于ui小姐姐提前完成ui图375px,并且早期开发人员未全局配置,新功能需要手动2倍转化,临时功能,不需要忽略就好)
+(鸡肋,由于ui小姐姐提前完成ui图375px,并且早期开发人员未全局配置,
+新功能需要手动2倍转化,临时功能,不需要忽略就好)
 
-# Install
 
-```bash
-ext install taro
-```
+# 使用
 
-# How To Use
-
-+ Auto snippet
  大写首字母选择补全:
-V ---> <View></View>
+ 
+V ---> `<View></View>`
 
 # 支持标签:
-'Scrollview',
+'Scrollview'
   'Swiper',
   'MovableView',
   'Icon',
@@ -49,8 +42,8 @@ V ---> <View></View>
   
 # 全局模板:
 TaroEasy
-
-    `
+```javascript
+    
 import Taro, { Component } from '@tarojs/taro';
 import { View, Text } from '@tarojs/components';
 import './index.scss'
@@ -76,19 +69,20 @@ class  $1  extends Component {
   }
 }
 export default $1;
-`
 
-+ CLI: Press `F1`, enter `taro`(全局1px转化2px,忽略)
+```
+持续更新中...
+# 命令行
+ Press `F1`, enter `helloWorld` (显示默认title,默认'gogogo')
+ Press `F1`, enter `taro`(全局1px转化2px,不需要可忽略)
+ 
 
-# Support Language
 
-html vue css less scss sass stylus tpl（php smarty3）
-
-# Configuration
+# 设置
 
 
 num 转化倍数 默认2倍
 title 官方程序 默认 gogogo
 config 转化开启开关 默认 false
 
-**NOTE:** Muse be restart vscode after modification
+
