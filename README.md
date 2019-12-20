@@ -73,7 +73,9 @@ export default $1;
 <img src="https://github.com/ljf15135429192/vscode-taro/blob/master/images/3.gif?raw=true">
 
 
- - 可修改转化倍数,即 num = 0.5  1px ---> 0.5px
+ - 可修改转化倍数
+  -  num = 0.5  1px ---> 0.5px
+  -  num = 2  1px ---> 2px
   
 # 命令行
  - Press `F1`, enter `bald` 
