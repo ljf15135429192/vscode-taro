@@ -18,7 +18,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld",
+		"onCommand:cxk.showReminderView",
+		"onCommand:extension.taro",
 		"onLanguage:html",
 		"onLanguage:vue",
 		"onLanguage:css",
@@ -29,14 +30,16 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			},
+		"commands": [
 			{
 				"command": "extension.taro",
 				"title": "taro"
-			}
+			},
+			{
+				"command": "bald.showReminderView",
+				"title": "打开秃头提示",
+				"category": "bald"
+		}
 		],
 		"snippets": [
 			{
@@ -48,10 +51,15 @@
 			"type": "object",
 			"title": "taro-config",
 			"properties": {
-				"helloWorld.title": {
+				"bald.title": {
 					"type": "string",
-					"default": "go go go！",
-					"description": "文本"
+					"default": "还在写代码? 不怕秃头? 休息一会吧!!!",
+					"description": "提示文本"
+				},
+				"bald.config": {
+					"type": "boolean",
+					"default": true,
+					"description": "是否开启秃头提示"
 				},
 				"taro.num": {
 					"type": "number",

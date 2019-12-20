@@ -2,13 +2,15 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const vscode = require("vscode");
 const provider_1 = require("./provider");
+const show_1 = require("./show");
 function activate(context) {
     //全局命令
-    let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
-        let text = vscode.workspace.getConfiguration('helloWorld');
-        console.log(text.title);
-        vscode.window.showInformationMessage(text.title);
-    });
+    // let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
+    // 	let text = vscode.workspace.getConfiguration('helloWorld');
+    // 	console.log(text.title);
+    // 	vscode.window.showInformationMessage(text.title);
+    // });
+    // context.subscriptions.push(disposable);
     let num = vscode.workspace.getConfiguration('taro');
     let provider = new provider_1.TaroProvider(num);
     //动态筛选
@@ -35,7 +37,12 @@ function activate(context) {
             return code.replace(rePxAll, (word) => {
                 const px = parseFloat(word);
                 let value = px * Number(num.num);
-                const res = { px: word, pxValue: px, value, rem: value + 'px' };
+                const res = {
+                    px: word,
+                    pxValue: px,
+                    value,
+                    rem: value + 'px'
+                };
                 if (res) {
                     return res.rem;
                 }
@@ -48,7 +55,24 @@ function activate(context) {
         });
     });
     context.subscriptions.push(disposableTaro);
-    context.subscriptions.push(disposable);
+    //弹窗
+    context.subscriptions.push(vscode.commands.registerCommand('bald.showReminderView', () => {
+        show_1.ReminderView.show(context);
+    }));
+    let bald = vscode.workspace.getConfiguration('bald');
+    let config = bald.config;
+    let setinter = null;
+    if (config) {
+        setinter = setInterval(() => {
+            show_1.ReminderView.show(context);
+        }, 6000);
+    }
+    else {
+        if (setinter) {
+            clearInterval(setinter);
+            setinter = null;
+        }
+    }
 }
 exports.activate = activate;
 function deactivate() { }
