@@ -1,18 +1,9 @@
-# 基本
-整合基础的taro标签片段
+# taro 代码片段
+<img src="https://github.com/ljf15135429192/vscode-taro/blob/master/images/2.gif?raw=true">
 
-1px转化为2px
-(鸡肋,由于ui小姐姐提前完成ui图375px,并且早期开发人员未全局配置,
-新功能需要手动2倍转化,临时功能,不需要忽略就好)
+  V ---> `<View></View>`
 
-
-# 使用
-
- 大写首字母选择补全:
- 
-V ---> `<View></View>`
-
-# 支持标签:
+## 支持标签:
 'Scrollview'
   'Swiper',
   'MovableView',
@@ -40,7 +31,7 @@ V ---> `<View></View>`
   'Canvas',
   'WebView'
   
-# 全局模板:
+## 全局模板:
 TaroEasy
 ```javascript
     
@@ -72,17 +63,30 @@ export default $1;
 
 ```
 持续更新中...
+# taro 秃头提示
+<img src="https://github.com/ljf15135429192/vscode-taro/blob/master/images/1.png?raw=true">
+
+
+   - 预防秃头提示默认开启,健康生活从今天开始!
+
+# taro 倍数转化
+<img src="https://github.com/ljf15135429192/vscode-taro/blob/master/images/3.gif?raw=true">
+
+
+ - 可修改转化倍数,即 num = 0.5  1px ---> 0.5px
+  
 # 命令行
- Press `F1`, enter `helloWorld` (显示默认title,默认'gogogo')
- Press `F1`, enter `taro`(全局1px转化2px,不需要可忽略)
+ - Press `F1`, enter `bald` 
+  - (秃头提示，默认开启)
+ - Press `F1`, enter `taro`
+  - (全局px倍数转化，默认关闭)
  
 
 
 # 设置
 
-
-num 转化倍数 默认2倍
-title 官方程序 默认 gogogo
-config 转化开启开关 默认 false
-
+- **config** 自动检测转化开启开关 默认 false
+- **num**    转化倍数 默认2倍
+- **Bald:config** 秃头提示开关 默认 true
+- **Bald:Title**  秃头提示文本 默认 `还在写代码? 不怕秃头? 休息一会吧!!!`
 
