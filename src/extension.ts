@@ -69,19 +69,13 @@ export function activate(context: vscode.ExtensionContext) {
 		ReminderView.show(context);
 	}));
 
-	let bald = vscode.workspace.getConfiguration('bald');
-	let config = bald.config;
-	let setinter = null;
-	if (config) {
-		setinter = setInterval(() => {
-			ReminderView.show(context);
-		}, 6000);
-	} else {
-		if (setinter) {
-			clearInterval(setinter);
-			setinter = null;
-		}
-	}
+   setInterval(() => {
+
+			if(vscode.workspace.getConfiguration('bald').config){
+					ReminderView.show(context);
+			}
+		}, 3600*1000);
+	
 }
 
 

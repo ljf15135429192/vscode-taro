@@ -34,11 +34,12 @@
 			{
 				"command": "extension.taro",
 				"title": "taro"
+			
 			},
 			{
 				"command": "bald.showReminderView",
-				"title": "打开秃头提示",
-				"category": "bald"
+				"title": "bald"
+	
 		}
 		],
 		"snippets": [
@@ -50,26 +51,25 @@
 		"configuration": {
 			"type": "object",
 			"title": "taro-config",
-			"properties": {
-				"bald.title": {
-					"type": "string",
-					"default": "还在写代码? 不怕秃头? 休息一会吧!!!",
-					"description": "提示文本"
-				},
-				"bald.config": {
-					"type": "boolean",
-					"default": true,
-					"description": "是否开启秃头提示"
-				},
-				"taro.num": {
+			"properties": {		"taro.num": {
 					"type": "number",
 					"default": 2,
-					"description": "倍数"
+					"description": "px倍数"
 				},
 				"taro.config": {
 					"type": "boolean",
 					"default": false,
-					"description": "是否开启倍数"
+					"description": "是否开启px倍数转化?"
+				},
+				"bald.title": {
+					"type": "string",
+					"default": "还在写代码? 不怕秃头? 休息一会吧!!!",
+					"description": "秃头提示文本:"
+				},
+				"bald.config": {
+					"type": "boolean",
+					"default": true,
+					"description": "是否开启秃头提示?"
 				}
 			}
 		}

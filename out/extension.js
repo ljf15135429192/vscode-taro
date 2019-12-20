@@ -59,20 +59,11 @@ function activate(context) {
     context.subscriptions.push(vscode.commands.registerCommand('bald.showReminderView', () => {
         show_1.ReminderView.show(context);
     }));
-    let bald = vscode.workspace.getConfiguration('bald');
-    let config = bald.config;
-    let setinter = null;
-    if (config) {
-        setinter = setInterval(() => {
+    setInterval(() => {
+        if (vscode.workspace.getConfiguration('bald').config) {
             show_1.ReminderView.show(context);
-        }, 6000);
-    }
-    else {
-        if (setinter) {
-            clearInterval(setinter);
-            setinter = null;
         }
-    }
+    }, 3600 * 1000);
 }
 exports.activate = activate;
 function deactivate() { }
