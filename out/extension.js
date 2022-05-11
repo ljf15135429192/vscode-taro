@@ -63,7 +63,7 @@ function activate(context) {
         if (vscode.workspace.getConfiguration('bald').config) {
             show_1.ReminderView.show(context);
         }
-    }, 3600 * 1000);
+    }, 3600 * 4000);
 }
 exports.activate = activate;
 function deactivate() { }

@@ -46,6 +46,10 @@
 			{
 				"language": "javascript",
 				"path": "./snippets/taro.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/taro.json"
 			}
 		],
 		"configuration": {

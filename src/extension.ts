@@ -74,7 +74,7 @@ export function activate(context: vscode.ExtensionContext) {
 			if(vscode.workspace.getConfiguration('bald').config){
 					ReminderView.show(context);
 			}
-		}, 3600*1000);
+		}, 3600*4000);
 	
 }
 
