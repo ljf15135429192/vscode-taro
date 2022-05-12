@@ -2,7 +2,7 @@
 	"name": "taro",
 	"displayName": "taro",
 	"description": "taro代码片段",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"icon": "icon.png",
 	"publisher": "jinfenglou",
 	"repository": {
@@ -34,13 +34,11 @@
 			{
 				"command": "extension.taro",
 				"title": "taro"
-			
 			},
 			{
 				"command": "bald.showReminderView",
 				"title": "bald"
-	
-		}
+			}
 		],
 		"snippets": [
 			{
@@ -55,7 +53,8 @@
 		"configuration": {
 			"type": "object",
 			"title": "taro-config",
-			"properties": {		"taro.num": {
+			"properties": {
+				"taro.num": {
 					"type": "number",
 					"default": 2,
 					"description": "px倍数"
@@ -78,7 +77,6 @@
 			}
 		}
 	},
-
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
 		"compile": "tsc -p ./",
@@ -94,8 +92,11 @@
 		"@types/vscode": "^1.38.0",
 		"glob": "^7.1.4",
 		"mocha": "^6.1.4",
-		"typescript": "^3.3.1",
 		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
 		"vscode-test": "^1.0.2"
+	},
+	"dependencies": {
+		"vsce": "^2.7.0"
 	}
 }
