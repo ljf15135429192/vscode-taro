@@ -232,6 +232,36 @@
         ],
         "description": "vue2模板快速生成"
     },
+    "ssl": {
+        "prefix": "ss",
+        "body": [
+            "<template>",
+            "\t<div class=\"\">\n\t\t$2\n\t</div>",
+            "</template>",
+            "",
+            "<script>",
+            "export default {",
+            "\tname: \"\",",
+            "\tcomponents: {},",
+            "\tmixins: [],",
+            "\tprops: {},",
+            "\tdata () {",
+            "\t\treturn {}",
+            "\t},",
+            "\tcomputed: {},",
+            "\twatch: {},",
+            "\tfilter: {},",
+            "\tcreated () { },",
+            "\tmounted () { },",
+            "\tmethods: {},",
+            "}",
+            "</script>",
+            "<style lang='less' scoped>",
+            "</style>",
+            ""
+        ],
+        "description": "vue2模板快速生成"
+    },
     "qq": {
         "prefix": "qq",
         "body": [
@@ -242,5 +272,12 @@
             "*/"
         ],
         "description": "快捷注释"
+    },
+    "tdl": {
+        "prefix": "td",
+        "body": [
+            "// TODO ljf $0"
+        ],
+        "description": "todo"
     }
 }
