@@ -2,7 +2,7 @@
 	"name": "taro",
 	"displayName": "taro",
 	"description": "taro代码片段",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"icon": "icon.png",
 	"publisher": "jinfenglou",
 	"repository": {
@@ -71,7 +71,7 @@
 				},
 				"bald.config": {
 					"type": "boolean",
-					"default": true,
+					"default": false,
 					"description": "是否开启秃头提示?"
 				}
 			}
